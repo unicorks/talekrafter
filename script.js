@@ -38,6 +38,7 @@ window.addEventListener('load', function(){
                 let lines = document.querySelector('#story').children
                 for (i = 0; i < lines.length; i++){
                     text = text.concat(lines[i].textContent)
+                    text = text.concat(`\n`)
                 }
                 download('story.txt', text)
             }
