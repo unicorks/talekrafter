@@ -29,7 +29,9 @@
                     // add logic to insert line in div
                     let parent = document.querySelector('#story');
                     const div = document.createElement('div');
-                    div.textContent = `${name.value} said: ${line.value}`
+                    arr = ['said', 'declared', 'added', 'postulated', 'remarked', 'mentioned']
+                    const verb = arr[Math.floor(Math.random() * arr.length)];
+                    div.textContent = `${name.value} ${verb}: ${line.value}`
                     name.value = ''
                     line.value = ''
                     parent.appendChild(div)
@@ -50,6 +52,9 @@
 
             })
     </script>
+    <style>
+        
+    </style>
 </head>
 <body>
     <div>Create and collaborate on the story!</div>
