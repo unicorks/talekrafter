@@ -88,6 +88,11 @@ input {
 input:hover {
     border-color: #15978f;
 }
+.subhead {
+    font-family: "Poppins", sans-serif;
+    font-size: xx-large;
+    margin: 30px 0px;
+}
     </style>
 
 </head>
@@ -101,13 +106,13 @@ input:hover {
         />
     </div>
 <div id="main">
-    <div id="subtl1">Create and collaborate on the story!</div>
+    <div class="subhead">Create and collaborate on the story!</div>
     <button id="export" type="button" class="btn btn-outline-success">Export your story</button>
     <div id="story">
         <!-- dynamically add storylines -->
     </div>
     <div id="enter_line">
-        <input id='name' type='text' autocomplete="off" autofocus placeholder="Enter your name..."><br>
+        <input id='name' type='text' autocomplete="off" placeholder="Enter your name..."><br>
         <input id='line' type="text" autocomplete="off" placeholder="Add a wacky, humourous line to your story...">
         <button id="submit" type="button" class="btn btn-outline-success">Submit!</button>
     </div>
