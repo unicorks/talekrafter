@@ -23,6 +23,7 @@
   font-size: 40px;
   margin-left: 10.5%;
   margin-top: 0px;
+  margin-bottom: 70px;
   font-family: "Inter", sans-serif;
 }
 
@@ -46,4 +47,22 @@
   float: left;
   margin-left: 20px;
   margin-top: 10px;
+}
+
+/* button */
+
+.button-3 {
+  border: 2px solid #0e4743;
+  padding: 20px;
+  background-color: #0e4743;
+  margin-left: 11.5%;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.button-3:hover {
+  box-shadow: 5px 5px #609693;
+  transition: 0.3s;
 }
