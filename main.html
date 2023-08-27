@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talekrafter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <script>
         window.addEventListener('load', function(){
         count = 0
@@ -29,9 +30,10 @@
                     // add logic to insert line in div
                     let parent = document.querySelector('#story');
                     const div = document.createElement('div');
-                    arr = ['said', 'declared', 'added', 'postulated', 'remarked', 'mentioned']
+                    arr = ['said', 'declared', 'added', 'remarked', 'mentioned']
                     const verb = arr[Math.floor(Math.random() * arr.length)];
                     div.textContent = `${name.value} ${verb}: ${line.value}`
+                    div.classList.add('story_line')
                     name.value = ''
                     line.value = ''
                     parent.appendChild(div)
@@ -52,20 +54,52 @@
 
             })
     </script>
+
     <style>
-        
+#main {
+    margin: 100px 50px;
+    width:85%;
+}
+.story_line {
+    width: 100%;
+    border-radius: 2%;
+    margin: 0.5%;
+    padding: 0.5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.story {
+    width:100%
+}
+button, input {
+    margin: 0.5%
+}
+.line {
+    width: 100px;
+    height: 50px
+}
     </style>
+
 </head>
 <body>
-    <div>Create and collaborate on the story!</div>
+    <div class="nav-main">
+        <img
+          id="nav-logo"
+          src="tk-nobg.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+    </div>
+<div id="main">
+    <div id="subtl1">Create and collaborate on the story!</div>
     <button id="export">Export your story</button>
     <div id="story">
         <!-- dynamically add storylines -->
     </div>
     <div id="enter_line">
-        <input id='name' type='text' autocomplete="off" autofocus placeholder="Enter your name...">
+        <input id='name' type='text' autocomplete="off" autofocus placeholder="Enter your name..."><br>
         <input id='line' type="text" autocomplete="off" placeholder="Add a wacky, humourous line to your story...">
         <button id="submit">Submit!</button>
     </div>
+</div>
 </body>
 </html>
